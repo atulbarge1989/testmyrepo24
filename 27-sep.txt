@@ -1,0 +1,58 @@
+how to remove files directory
+----------------------------------
+rmdir
+this command is used to delete only empty directory 
+rmdir <-option>  path od only directory(empty)
+       -v 
+       -p
+----------------------------------------------------------
+rm (this commnad is use to remove files and directory)
+but to remove directory u must use -r option
+
+#rm <-option> (path of files/directory)
+     -v = verbose
+     -r = recurssive 
+     -i = impormpting 
+     -f = force  
+---------------------------------------------------------------------------------
+mkdir 
+touch 
+cp
+mv
+rm
+rmdir
+ls
+cd
+cat
+vim
+----------------------------------------------------------------------------------------
+grep
+is use to filteror serach word from specific file
+grep <option> <word> file-name
+grep  -i, --ignore-case
+
+
+backup-date-timestmp
+file-date-timestamp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

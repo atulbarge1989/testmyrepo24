@@ -1,0 +1,67 @@
+mkdir
+touch
+cat
+vim
+ls
+cd
+head
+tail
+------------------------------------
+rmdir
+rm  
+mv  ---> cut and paste ----> rename 
+cp  ---> copy and paste --->rename 
+------------------------------------
+cp --> copy 
+syntax
+ cp   <-option>  (source of file/folder)  (destination of file/folder)
+       -v  -- verbose
+       -r  -- recurssive any folder if ypu want to copy u have use -r  
+
+/
+-->home
+   ---->akash
+       ------>Desktop
+       ------>download      
+
+   ----->tejas
+         ---->abc
+         ---->xyz 
+
+
+[root@station1~]pwd
+/root
+
+[root@station1tejas]#pwd
+/home/tejas
+
+mkdir -v data
+touch data/a1.txt
+# cp -v data/a1.txt  /home/akash/Download
+
+rename using cp(copy command)
+
+# cp -v data/a1.txt  /home/akash/Download/test.php 
+
+1> copy normal files
+2> copy normal folder with option -r
+3> copy and paste .hidden files and folder
+4> copy and paste files and folder while rename it 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,53 @@
+1> how to create yum repository using FTP
+--------------------------------------------
+server side ----> 192.168.1.10
+------------------------------
+/dev/sr0  
+mkdir -v /centos-7
+mount /dev/sr0 /centos-7
+vim /etc/yum.repos.d/redhat.repo
+[redhat]
+name=this is my redhat repo
+baseurl=file:///centos-7
+enabled=1
+gpgcheck=1
+gpgkey=/centos-7/RPM-CENTO&-KEY
+------------------------------------------------------------------------------
+yum update
+yum install vsftpd
+service start vsftpd
+service status vsftpd
+
+/var/ftp
+mkdir -v /var/ftp/ftpserver
+cp -ivr /centos-7/*  /var/ftp/ftpserver
+
+service restart vsftpd
+--------------------------------------------------------------------------------
+client ----> 192.168.1.12
+-----------
+vim /etc/yum.repos.d/redhat.repo
+[redhat]
+name=this is my redhat repo
+baseurl=ftp://192.168.1.10/ftpserver
+enabled=1
+gpgcheck=1
+gpgkey=ftp://192.168.1.10/ftpserver/RPM-CENTO&-KEY
+
+:wq
+yum update
+yum install tree
+
+
+
+
+
+
+
+
+
+
+
+
+
+

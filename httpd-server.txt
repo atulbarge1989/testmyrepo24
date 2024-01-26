@@ -1,0 +1,27 @@
+Apache/ Httpd 
+
+/etc/apache
+/etc/httpd 
+
+192.168.135.130
+yum install httpd -y 
+systemctl start httpd
+systemctl enable httpd
+systemctl status httpd
+
+ls /var/www/html 
+
+/usr/share/httpd/noindex/index.html
+
+/etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.135.130 station5.example.com station5 station5 webserver.com
+
+
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=80/udp
+
+
+

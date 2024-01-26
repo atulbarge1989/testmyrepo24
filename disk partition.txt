@@ -1,0 +1,166 @@
+disk add vmware settinf disk memory 
+
+partition
+fdisk / parted
+parted / partprobe
+mkfs.ext4
+mount
+umount 
+df -h 
+------------------------------
+LVM
+----
+partition 
+fdisk / parted
+parted / partprobe
+pvcreate 
+pvdisplay
+pvs
+vgcreate 
+vgdisplay
+vgs
+lvcreate 
+lvdisplay
+lvs
+mkfs.ext4
+mount
+umount 
+df -h 
+-----------------------------------------------------------------------------------------
+
+93  df -h
+   94  fdisk -l
+   95  parted 
+   96  fdisk -l
+   97  fdisk /dev/sda
+   98  fdisk -l
+   99  fdisk -lh
+  100  fdisk -lH
+  101  fdisk -l
+  102  parted 
+  103  df -h
+  104  cat /etc/fstab 
+  105  fdisk /dev/sda 
+  106  partprobe -a /dev/sda
+  107  partprobe /dev/sda
+  108  fdisk -l /dev/sda 
+  109  mkfs.ext4 /dev/sda6
+  110  df -h
+  111  mkdir -v /database
+  112  mount /dev/sda6 /database/
+  113  df -h
+  114  umount /database 
+  115  df -h
+  116  fdisk  /dev/sda 
+  117  partprobe /dev/sda
+  118  fdisk -l  /dev/sda 
+  119  vim /etc/fstab 
+  120  mount -a
+  121  free -h
+  122  fdisk /dev/sda
+  123  partprobe /dev/sda
+  124  mkfs.vfat /dev/sda5
+  125  fdisk /dev/sda
+  126  partprobe /dev/sda
+  127  mkfs.vfat /dev/sda6
+  128  mkdir -v /common-folder
+  129  mount /dev/sda6 /common-folder/
+  130  df -h
+  131  umount /common-folder 
+  132  fdisk /dev/sda
+  133  partprobe /dev/sda
+  134  blkid
+  135  vim /etc/fstab 
+  136  fdisk /dev/sda 
+  137  partprobe /dev/sda
+  138  fdisk  -l
+  139  mkdir -v /device-6 /device-7
+  140  mkfs.xfs /dev/sda6 
+  141  mkfs.xfs -f  /dev/sda6 
+  142  mkfs.ext4  /dev/sda7
+  143  mount /dev/sda6 /device-6
+  144  mount /dev/sda7 /device-7
+  145  df -h
+  146  blkid /dev/sda6
+  147  blkid /dev/sda7
+  148  vim /etc/fstab 
+  149  mount -a
+  150  blkid /dev/sda7
+  151  vim /etc/fstab 
+  152  blkid /dev/sda7 >> /etc/fstab 
+  153  vim /etc/fstab 
+  154  mount -a
+  155  vim /etc/fstab 
+  156  umount /device-6
+  157  umount /device-7
+  158  df -h
+  159  fdisk /dev/sda 
+  160  partprobe /dev/sda
+  161  df -h
+  162  adduser mahesh
+  163  passwd mahesh
+  164  su - mahesh 
+  165  umask 
+  166  fdisk /dev/sda 
+  167  partprobe /dev/sda
+  168  vim /etc/fstab 
+  169  fdisk  /dev/sda 
+  170  partprobe /dev/sda
+  171  man lvm
+  172  man pvcreate
+  173  pvcreate /dev/sda6 
+  174  pvdisplay 
+  175  vgcreate mysteps /dev/sda6
+  176  pvdisplay 
+  177  pvs
+  178  vgdisplay 
+  179  vgs
+  180  pvcreate /dev/sda7
+  181  pvdisplay 
+  182  vgs
+  183  vgextend mysteps /dev/sda7
+  184  vgs
+  185  pvdisplay 
+  186  vgreduce mysteps /dev/sda7
+  187  pvdisplay 
+  188  vgs
+  189  vgextend mysteps /dev/sda7
+  190  vgs
+  191  man lvcreate 
+  192  lvcreate -L +512M -n mylvm1 mysteps 
+  193  vgs
+  194  lvdisplay 
+  195  lvs
+  196  lvdisplay 
+  197  mkfs.xfs /dev/mysteps/mylvm1 
+  198  mkdir -v /network-lvm
+  199  mount /dev/mysteps/mylvm1  /network-lvm/
+  200  df -h
+  201  blkid /dev/mysteps-mylvm1
+  202  blkid /dev/mysteps/mylvm1
+  203  lvcreate -L +100M -n data mysteps 
+  204  lvcreate -L +200M -n market  mysteps 
+  205  lvcreate -L +300M -n sales  mysteps 
+  206  lvs
+  207  vgs
+  208  lvextend -L +200M /dev/mysteps/sales 
+  209  lvs
+  210  lvremove /dev/mysteps/sales 
+  211  lvremove /dev/mysteps/market 
+  212  lvremove /dev/mysteps/data 
+  213  lvremove /dev/mysteps/mylvm1 
+  214  df -h
+  215  umount /network-lvm 
+  216  df -h
+  217  lvremove /dev/mysteps/mylvm1 
+  218  lvs
+  219  vgs
+  220  vgremove mysteps 
+  221  vgs
+  222  pvs
+  223  pvremove /dev/sda6 /dev/sda7 
+  224  fdisk /dev/sda
+  225  partprobe /dev/sda
+  226  history 
+[root@station1 ~]# 
+[root@station1 ~]# 

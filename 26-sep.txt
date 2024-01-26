@@ -1,0 +1,25 @@
+WSL install 
+1> enable windows feature for hyper-v 
+2> open poweshell/cmd as admin mode
+3> wsl --install 
+4> wsl --install -d Ubuntu-22
+----------------------------------------------------------------------------------------------------------> if u want to install tree command 
+> apt update 
+> apt install tree 
+---------------------------------------------------------------------------------------------------------
+
+Copy command 
+cp -option <source> <destination>
+	-r whenever u want copy folder then u must use option -r 
+	-v
+cp -vr sorce/a1.php destination-path/tata.java
+----------------------------------------------------------------------------------------------------
+
+move command 
+mv -option <source> <destination>
+   -v 
+/root/test/a1.php 
+/home/ubuntu/data/backup
+---------------------------------------------------------------------------------------------------------rm and rmdir 
+ 
+		 

@@ -1,0 +1,32 @@
+NFS Server
+---------------
+Network File sharing 
+
+server
+192.168.135.130
+yum install nfs-utils
+systemct start nfs
+systemctl enable nfs
+systemctl status nfs 
+
+mkdir -v /data
+chmod 777 /data
+vim /etc/exorts
+/data *(rw,sync)
+
+:wq
+systemct restart nfs
+
+exportsfs -r
+exportsfs -v
+
+firewall-cmd --permanent --add-service=nfs
+firewall-cmd --permanent --add-service=mountd
+firewall-cmd --permanent --add-service=rpc-bind
+firewall-cmd --permanent --add-port=2049/tcp
+firewall-cmd --permanent --add-port=2049/udo
+firewall-cmd --reload
+
+mount /dev/sr0 /data
+df -h 
+

@@ -1,0 +1,103 @@
+1> you have to  mount cd/DVD of your redhat machine centos-7/ centos-8 
+/dev/sr0  
+mkdir -v /centos-7
+mount -o loop 
+vim /etc/yum.repos.d/redhat.repo
+[redhat]
+name=this is my redhat repo
+baseurl=file:///centos-7
+enabled=1
+gpgcheck=1
+gpgkey=/centos-7/RPM-CENTO&-KEY
+
+save and close
+redhat/centos/aws--->/etc/yum.repos.d
+yum update
+yum install php 
+yum remove php
+yum search php
+ 
+
+ubuntu ----> /etc/apt/sources.list.d/
+ubuntu ----> /etc/apt/sources.list
+apt update
+apt-get update
+apt install php
+apt remove php 
+
+------------------------------------------------------------------------------------------------------
+		http    ftp     nfs 
+redhat ---->    httpd   vsftpd  nfs-utils 
+yum install 
+
+server 
+192.168.1.10
+1> you have to  mount cd/DVD of your redhat machine centos-7/ centos-8 
+/dev/sr0  
+mkdir -v /centos-7
+mount -o loop 
+vim /etc/yum.repos.d/redhat.repo
+[redhat]
+name=this is my redhat repo
+baseurl=file:///centos-7
+enabled=1
+gpgcheck=1
+gpgkey=/centos-7/RPM-CENTO&-KEY
+
+save and close
+redhat/centos/aws--->/etc/yum.repos.d
+yum update
+yum install httpd 
+service httpd start
+        OR 
+systemctl start httpd.service
+
+service httpd status
+        OR 
+systemctl status httpd.service
+http --> file path ----> /var/www/html
+
+cp -ivr /centos-7  /var/www/html 
+
+ls /var/www/html/centos-7 
+        OR
+mkdir -v /var/www/html/httpdvd
+mount /dev/sr0 /var/www/html/httpdvd
+
+vim /etc/yum.repos.d/httpdvd.repo
+[redhat]
+name=this is my redhat repo
+baseurl=http://192.168.1.10/httpdvd
+enabled=1
+gpgcheck=1
+gpgkey=http://192.168.1.10/httpdvd/RPM-CENTO&-KEY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

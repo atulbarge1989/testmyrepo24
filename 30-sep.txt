@@ -1,0 +1,45 @@
+swapnil:$y$j9T$ZNIy/6FKPyzJzTm5mHIQq/$Ow9IyhEuTZk1YI5IaEIAJv6jRhfSxzCm1RhVCy4dc20:19629:0:99999:7: : :
+1			2							    3   4   5   6  7 8 
+
+1> username 
+2> encrypted password 
+3> number od day since 1 jan 1970 last password change 	   
+4> number of days within you have to chnage your password, where 0 stands for there no need to change password
+5> number of days we can keep password   
+6> number of days warning before password expire 
+7> number of days after password expire,  password will inactive
+8> number of days after password will expire
+
+
+/etc/passwd
+/etc/shadow
+/etc/group
+/etc/gshadow      
+
+chown 
+  
+
+chown  <username>:<groupname> path of file/folder
+chown  martin:sales /home/sam/data
+
+
+<-option> -r   
+---------------------------------------------------------------
+chgrp
+
+chgrp <groupname> path of file/folder
+chgrp  sales /home/sam/data
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                

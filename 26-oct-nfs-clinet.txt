@@ -1,0 +1,22 @@
+Client - ---> 192.168.135.131
+
+showmount -e 192.168.135.130
+/data *(rw,sync)
+
+mkdir -v /clientdata
+mount -t nfs 192.168.135.130:/data /clientdata
+
+vim /etc/yum.repos.d/nfs.repo
+[nfs]
+name=nfs
+baseurl=file:///clientdata
+enabled=1
+gpgcheck=1
+gpckey=file:///clinetdata/RPM-GPG-CNETOS-7
+
+:wq
+yum clean all
+yum repolist
+---------------------------------------------
+make sure server folder only have read only access.
+
