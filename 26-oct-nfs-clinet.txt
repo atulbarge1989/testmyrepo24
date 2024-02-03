@@ -1,5 +1,5 @@
 Client - ---> 192.168.135.131
-
+server automatuin 
 showmount -e 192.168.135.130
 /data *(rw,sync)
 
